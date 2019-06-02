@@ -1,0 +1,9 @@
+<div class="search-container">
+    <form class="search-form">
+        <mat-form-field>
+            <input id="searchInput" matInput type="text" #searchbox (keyup.enter)="searchMovies(searchbox.value)">
+            <mat-placeholder>Search</mat-placeholder>
+        </mat-form-field>
+    </form>
+</div>
+<movie-container [movies]="movies"></movie-container>

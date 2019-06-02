@@ -1,0 +1,31 @@
+<form class="user-form" #loginFrom="ngForm" (ngSubmit)="authenticateUser()">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h3><strong>User Login</strong></h3>
+            </mat-card-title>
+            <mat-card-subtitle>
+                <hr>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-label class="label-width">User ID : </mat-label>
+            <mat-form-field class="input-width">
+                <input matInput class="user-id" name="userId" id="userId" #userId="ngModel" [(ngModel)]="user.userId"
+                    required>
+                <mat-error *ngIf='userId.errors?.required'>User Id is mandatory</mat-error>
+            </mat-form-field>
+            <mat-label class="label-width">Password : </mat-label>
+            <mat-form-field class="input-width">
+                <input matInput class="password" type="password" name="password" id="password" #password="ngModel"
+                    [(ngModel)]="user.password" required>
+                <mat-error *ngIf="password.errors?.required">Password is mandatory</mat-error>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions align="center">
+            <button type="submit" class="login-user-btn" [disabled]="loginFrom.invalid" mat-raised-button
+                color="primary">Login</button>
+            <button class="reg-btn" mat-raised-button color="primary" [routerLink]="['/register']">Register</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

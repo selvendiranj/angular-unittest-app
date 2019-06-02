@@ -1,0 +1,13 @@
+.user-form {
+    width: 40vw;
+    padding-left: 30vw;
+    padding-top: 5vh;
+}
+
+.label-width {
+    font-size: 12px;
+}
+
+.input-width {
+   width: 100%;
+}

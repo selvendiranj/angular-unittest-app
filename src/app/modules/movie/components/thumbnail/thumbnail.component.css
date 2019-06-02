@@ -1,0 +1,32 @@
+.movie-thumbnail {
+    width: 200px;
+    margin: 10px;
+}
+
+.movie-title {
+    height: 18px;
+    overflow-y: auto;
+}
+
+.movie-title::-webkit-scrollbar {
+    width: 2px;
+    background: gray;
+}
+
+.movie-image {
+    height: 300px;
+}
+
+.movie-overview {
+    height: 80px;
+    overflow-y: auto;
+}
+
+.movie-overview::-webkit-scrollbar {
+    width: 2px;
+    background: gray;
+}
+
+md-card-actions {
+    margin-top:auto;
+}
